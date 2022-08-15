@@ -1,0 +1,23 @@
+CREATE TABLE antiques (id INTEGER PRIMARY KEY, item TEXT, origin TEXT, year INTEGER, price INTEGER);
+INSERT INTO antiques VALUES (1, "roller skates", "chicago", 1905, 195);
+INSERT INTO antiques VALUES (2, "vase", "france", 1856, 225);
+INSERT INTO antiques VALUES (3, "stained glass", "new york", 1902, 500);
+INSERT INTO antiques VALUES (4, "martini shaker", "new york", 1922, 400);
+INSERT INTO antiques VALUES (5, "chess board", "england", 1904, 430);
+INSERT INTO antiques VALUES (6, "portable gramophone", "england", 1927, 200);
+INSERT INTO antiques VALUES (7, "chaise lounge", "france", 1890, 3590);
+INSERT INTO antiques VALUES (8, "oval mirror", "tennessee", 1940, 350);
+INSERT INTO antiques VALUES (9, "silver tea set", "england", 1802, 4500);
+INSERT INTO antiques VALUES (10, "book case", "virginia", 1933, 500);
+INSERT INTO antiques VALUES (11, "wooden toy car", "usa", 1950, 40);
+INSERT INTO antiques VALUES (12, "wingback chair", "north carolina", 1940, 200);
+INSERT INTO antiques VALUES (13, "wooden checker board", "usa", 1930, 70);
+INSERT INTO antiques VALUES (14, "crystal bowl", "usa", 1910, 300);
+INSERT INTO antiques VALUES (15, "garden statue", "england", 1902, 600);
+
+
+--display the database ordered by price. 
+SELECT * FROM antiques ORDER BY price;
+
+--What is the place of origin?
+SELECT origin, COUNT(*) FROM antiques GROUP BY origin;
